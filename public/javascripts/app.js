@@ -112,6 +112,15 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
     window.localStorage.removeItem('save');
   }
   
+  $scope.image = function(bar){
+    if(bar.image){
+      $scope.barImage = bar.image;
+    }
+    else{
+      $scope.barImage = 'http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png';
+    }
+  };
+  
   $scope.attending = function(bar) {
     var user = window.localStorage.getItem('username');
     if(user && bar.userArray.indexOf(user)==-1){
