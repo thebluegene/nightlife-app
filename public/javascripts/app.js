@@ -185,6 +185,7 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
   $scope.remove = function(bar){
       var index = bar.userArray.indexOf(window.localStorage.getItem('username'));
       bar.userArray.splice(index,1);
+      console.log(bar.userArray);
       var data = {users: bar.userArray};
       if (bar.userArray.length <= 0){
         $http.delete('/app/yelp/'+bar.id).success(function(){
