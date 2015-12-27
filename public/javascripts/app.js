@@ -162,7 +162,9 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
         });
       }
       else{
-        $http.put('/app/yelp/'+bar.id, data);
+        $http.put('/app/yelp/'+bar.id, data).success(function(){
+          console.log('PUT resquest success');
+        });
       }
       
     }
