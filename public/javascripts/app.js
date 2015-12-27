@@ -155,7 +155,7 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
     if(user && bar.userArray.indexOf(user)==-1){
       bar.userArray.push(user);
       var data = {users: bar.userArray};
-      
+      console.log(bar.userArray);
       if(!bar.userArray){
         $http.post('/app/yelp/'+bar.id, data).success(function(response){
           console.log('response: ', response);
