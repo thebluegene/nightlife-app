@@ -114,11 +114,8 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
   
   $scope.image = function(bar){
     console.log(bar.image_url);
-    if(bar.image_url){
-      $scope.barImage = bar.image_url;
-    }
-    else{
-      $scope.barImage = 'http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png';
+    if(!bar.image_url){
+      $scope.bar.image_url = 'http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png';
     }
   };
   
