@@ -1,0 +1,21 @@
+<div class = 'contain'>
+    <div id='title'>
+        <h1>NIGHT LIGHT</h1>
+        <h2>See which bars are near you and tell others you are going!</h2>
+    </div>
+    <div id="search">
+        <input type="text" id="filter-search" style='width: 700px; height: 30px; margin: 0px 10px 0px 10px' />
+    </div>
+</div>
+<div id="list-results">
+    <div class = 'bars-list' ng-repeat = 'bar in businesses'>
+        <img src = {{bar.image_url}}>
+        <div class = 'bar-info'>
+            <h3>{{bar.name}}</h3>
+            <p>{{bar.rating}} out of 5 <i class="fa fa-star-o"></i></p>
+            <p>"{{bar.snippet_text}}"</p>
+            <button class='lets-party' ng-click = 'attending(bar)'>{{bar.userArray.length}} Attending</button>
+            <p class='yay' ng-show = 'alreadyGoing(bar)'> You are going! <span class = 'nvm' ng-click='remove(bar)'>(nevermind?)</span></p>
+        </div>
+    </div>
+</div>

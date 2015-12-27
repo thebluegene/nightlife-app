@@ -1,0 +1,112 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS RESET END*/
+/*------------------------------------------------------------------------*/
+.contain{
+  position: relative;
+  top: 100px;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #264c73;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1{
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 64px;
+  color: #ffffcc;
+}
+h2{
+  font-family:'Oxygen', sans-serif;
+  font-weight: 300;
+  color: #e6e6e6;
+}
+h3{
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+}
+#title, #search{
+  text-align: center;
+}
+#search{
+  position: relative;
+  top: 20px;
+}
+#list-results{
+  position: relative;
+  top: 130px;
+  width: 50%;
+  min-width: 700px;
+  margin: 10px auto;
+}
+.lets-party{
+  position: relative;
+}
+.bars-list{
+  height: 110px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #ffe6cc;
+}
+.bar-info{
+  position: relative;
+  top: 10px;
+}
+.bars-list img{
+  float: left;
+  margin: 5px 10px 5px 30px;
+}
+
+.yay{
+  display: inline;
+}
