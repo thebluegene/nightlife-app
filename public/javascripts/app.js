@@ -153,15 +153,20 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
   $scope.attending = function(bar) {
     var user = window.localStorage.getItem('username');
     if(user && bar.userArray.indexOf(user)==-1){
-      bar.userArray.push(user);
-      var data = {users: bar.userArray};
+      var data;
       console.log(bar.userArray);
-      if(!bar.userArray){
+      if(bar.userArray.length <= 0){
+        console.log('POST IT');
+        bar.userArray.push(user);
+        data = {users: bar.userArray};
         $http.post('/app/yelp/'+bar.id, data).success(function(response){
           console.log('response: ', response);
         });
       }
       else{
+        console.log('PUT IT');
+        bar.userArray.push(user);
+        data = {users: bar.userArray};
         $http.put('/app/yelp/'+bar.id, data).success(function(){
           console.log('PUT resquest success');
         });
