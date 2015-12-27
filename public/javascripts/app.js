@@ -188,9 +188,8 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
       console.log(bar.userArray);
       var data = {users: bar.userArray};
       if (bar.userArray.length <= 0){
-        $http.delete('/app/yelp/'+bar.id).success(function(){
-          console.log('DELETED');
-        });
+        console.log('DELETED');
+        $http.delete('/app/yelp/'+bar.id);
       }
       else{
         $http.put('/app/yelp/'+bar.id, data);
