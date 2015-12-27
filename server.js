@@ -160,6 +160,16 @@ app.put('/app/yelp/:bar', auth, function(req,res){
   });
 });
 
+app.delete('/app/yelp/:bar', auth, function(req,res){
+	var bar = req.params.bar;
+    //console.log(id);
+    Bar.remove({
+        id: bar
+    }, function(err, doc) {
+        if (err) throw err;
+    });
+});
+
 //==================================================================
 
 //==================================================================

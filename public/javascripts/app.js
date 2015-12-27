@@ -186,7 +186,14 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
       var index = bar.userArray.indexOf(window.localStorage.getItem('username'));
       bar.userArray.splice(index,1);
       var data = {users: bar.userArray};
-      $http.put('/app/yelp/'+bar.id, data);
+      if (bar.userArray.length <= 0){
+        $http.delete('/app/yelp/'+bar.id).success(function(){
+          console.log('DELETED');
+        });
+      }
+      else{
+        $http.put('/app/yelp/'+bar.id, data);
+      }
   };
   
   $scope.alreadyGoing = function(bar){
