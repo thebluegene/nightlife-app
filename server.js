@@ -167,6 +167,7 @@ app.delete('/app/yelp/:bar', auth, function(req,res){
         id: ''+bar+''
     }, function(err) {
         if (err) throw err;
+        res.status(204).end();
     });
 });
 
