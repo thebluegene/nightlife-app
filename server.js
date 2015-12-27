@@ -103,7 +103,7 @@ var app = express();
 
 
 // Connect to mongoose
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGOLAB_URI || process.env.MONGO_URI);
 
 // all environments
 app.set('port', process.env.PORT || 3000);
