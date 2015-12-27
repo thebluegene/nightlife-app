@@ -9,7 +9,7 @@
 </div>
 <div id="list-results">
     <div class = 'bars-list' ng-repeat = 'bar in businesses'>
-        <img  ng-init='image(bar)' src = {{barImage}}>
+        <img  ng-init='image(bar)' src = {{bar.barImage}}>
         <div class = 'bar-info'>
             <h3>{{bar.name}}</h3>
             <p>{{bar.rating}} out of 5 <i class="fa fa-star-o"></i></p>
