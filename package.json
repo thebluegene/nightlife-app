@@ -1,30 +1,20 @@
 {
-  "name": "clementinejs",
-  "version": "1.0.2",
-  "description": "A light-weight MEAN stack boilerplate.",
-  "main": "server.js",
+  "name": "AuthenticationInAngularJS",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "gulp"
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johnstonbl01/clementinejs"
-  },
-  "homepage": "http://johnstonbl01.github.io/clementinejs/",
-  "bugs": "https://github.com/johnstonbl01/clementinejs/issues",
-  "keywords": [
-    "MEAN",
-    "MongoDB",
-    "Express",
-    "Angular",
-    "Node",
-    "javascript",
-    "boilerplate"
-  ],
-  "author": "Blake Johnston",
-  "license": "MIT",
   "dependencies": {
-    "express": "^4.13.3",
-    "mongodb": "^2.0.42"
+    "dotenv": "^1.2.0",
+    "ejs": "*",
+    "express": "^3.3.5",
+    "mongoose": "^4.3.3",
+    "nonce": "^1.0.3",
+    "passport": "^0.3.2",
+    "passport-github": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "request": "^2.67.0",
+    "yelp": "^1.0.1"
   }
 }
