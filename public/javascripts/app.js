@@ -110,6 +110,7 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
   
   if(window.localStorage.getItem('save') && window.localStorage.getItem('prevSearch')){
     console.log('this should save the search');
+    $('.contain').addClass('active');
     search(window.localStorage.getItem('prevSearch'));
     window.localStorage.removeItem('save');
   }
