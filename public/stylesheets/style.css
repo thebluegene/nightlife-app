@@ -55,7 +55,10 @@ table {
 }
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/bg3.jpg');
   background-color: #264c73;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a {
