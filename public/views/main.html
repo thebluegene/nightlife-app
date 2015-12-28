@@ -8,12 +8,12 @@
     </div>
 </div>
 <div id="list-results">
-    <div class = 'bars-list' ng-repeat = 'bar in businesses'>
+    <div class = 'bars-list animated fadeInUp' ng-repeat = 'bar in businesses'>
         <img  ng-init='image(bar)' src={{bar.image_url}} height='100' width='100'>
         <div class = 'bar-info'>
-            <h3>{{bar.name}}</h3>
+            <h3 class = 'bar-name'>{{bar.name}}</h3>
             <p>{{bar.rating}} out of 5 <i class="fa fa-star-o"></i></p>
-            <p>"{{bar.snippet_text}}"</p>
+            <p><i>"{{bar.snippet_text}}"</i></p>
             <button class='lets-party' ng-click = 'attending(bar)'>{{bar.userArray.length}} Attending</button>
             <p class='yay' ng-show = 'alreadyGoing(bar)'> You are going! <span class = 'nvm' ng-click='remove(bar)'>(nevermind?)</span></p>
         </div>

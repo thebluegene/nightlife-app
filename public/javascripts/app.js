@@ -102,6 +102,8 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
     if (e.which == 13) {
       var input = this.value;
       search(input);
+      $('.contain').addClass('active');
+      $('.bars-list').removeClass('fadeInUp').addClass('fadeOut');
       window.localStorage.setItem('prevSearch', input);
     }
   });
@@ -176,6 +178,7 @@ app.controller('YelpCtrl', function($scope, $http, $location) {
   function search(location) {
     $http.get('/app/yelp/' + location).success(function(response) {
       $scope.businesses = response;
+      //$('.bars-list').addClass('animated fadeInDown');
       console.log(response);
     });
   }

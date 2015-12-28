@@ -46,9 +46,13 @@ table {
 /*------------------------------------------------------------------------*/
 .contain{
   position: relative;
-  top: 100px;
+  display: block;
+  top: 190px;
+  transition: top 1s;
 }
-
+.contain.active{
+  top: 20px;
+}
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #264c73;
@@ -73,6 +77,10 @@ h3{
   font-family: 'Oxygen', sans-serif;
   font-weight: 700;
 }
+i{
+  font-style: italic;
+}
+
 #title, #search{
   text-align: center;
 }
@@ -82,31 +90,48 @@ h3{
 }
 #list-results{
   position: relative;
-  top: 130px;
+  top: 50px;
   width: 65%;
   min-width: 700px;
   margin: 10px auto;
 }
-.lets-party{
-  position: relative;
-}
 .bars-list{
-  height: 110px;
+  height: 120px;
   border: 1px solid black;
   margin-bottom: 5px;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   background-color: #ffe6cc;
+  border-radius: 5px;
+  display: hidden;
 }
 .bar-info{
   position: relative;
   top: 10px;
+  margin-right: 10px;
+}
+.bar-info .bar-name{
+  position: relative;
+  margin-bottom: 5px;
 }
 .bars-list img{
   float: left;
-  margin: 5px 10px 5px 30px;
+  margin: 10px 10px 5px 30px;
+  border: 1px solid black;
 }
 
+.lets-party, .yay{
+  position: relative;
+  top: 5px;
+}
+.lets-party{
+  background-color: white;
+  border: 1px solid black;
+  padding: 3px 4px 3px 4px;
+}
+.nvm{
+  font-size: 10px;
+}
 .yay{
   display: inline;
 }

@@ -139,7 +139,7 @@ app.get('/app/yelp/:location', function(req,res){
     		}
     	});
     });
-    setTimeout(function(){res.json(data.businesses)},1000);
+    setTimeout(function(){res.json(data.businesses)},100);
   });
 });
 
